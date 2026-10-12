@@ -3,299 +3,557 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Aditi Singh - Hindi/English/Hinglish on-camera creator for fashion, jewellery and beauty. UGC, reels, product reviews.">
-<title>Aditi Singh Creator Portfolio</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600&display=swap">
+<title>Aditi Singh · Creator</title>
+<meta name="description" content="Aditi Singh: on-camera UGC creator for skincare, makeup, jewellery and budget fashion, in Hindi, English and Hinglish. 2.1M Reel views in 30 days.">
+<meta property="og:title" content="Aditi Singh · On-camera creator">
+<meta property="og:description" content="Skincare, makeup, jewellery and budget fashion videos in Hindi, English and Hinglish. 2.1M Reel views in 30 days.">
+<meta property="og:image" content="https://aditisingh2810.github.io/media/aditi.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="media/aditi.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&family=Manrope:wght@400;500;600;700&display=swap">
 <style>
-  /* Layout: a creator's reel wall. Hero + proof strip, then category shelves of phone-shaped video tiles, then offer + contact. */
+  /* Direction: a beauty-counter lookbook. Blush paper, plum ink, champagne-gold "jewellery" accents,
+     video wall styled like a stack of phone screens. */
   :root {
-    --bg: #fdf8f9;
-    --surface: #ffffff;
-    --blush: #f8e9ee;
-    --ink: #1f1a1d;
-    --muted: #6d6268;
-    --line: #ecdbe2;
-    --rose: #b0476b;
-    --rose-deep: #8a3252;
-    --on-rose: #ffffff;
-    --screen-a: #c35a7d;
-    --screen-b: #7d2b4a;
-    --display: "Playfair Display", Georgia, "Times New Roman", serif;
-    --body: Inter, "Segoe UI", system-ui, -apple-system, sans-serif;
+    --bg: #fbf5f2;
+    --paper: #ffffff;
+    --blush: #f6e3e6;
+    --blush-2: #efd2d8;
+    --ink: #2a1621;
+    --muted: #725d68;
+    --line: #ead7dc;
+    --rose: #b23a64;
+    --rose-ink: #ffffff;
+    --plum: #4a1d33;
+    --gold: #b98a3e;
+    --gold-soft: #f3e4c6;
+    --shadow: 0 18px 40px -22px rgba(74, 29, 51, .45);
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #171215; --surface: #211a1e; --blush: #2c2026; --ink: #f4ecef; --muted: #b5a6ae;
-      --line: #3a2c33; --rose: #e48aa8; --rose-deep: #f2a9c1; --on-rose: #2a1119;
-      --screen-a: #9c3f61; --screen-b: #4a1a2d; color-scheme: dark;
+      --bg: #160e12; --paper: #20151b; --blush: #2b1b23; --blush-2: #3a2430; --ink: #f7ecef; --muted: #c0a9b4;
+      --line: #3b2832; --rose: #ec7fa3; --rose-ink: #2a0f1b; --plum: #f4c9d7; --gold: #e2bb74; --gold-soft: #3a2d18;
+      --shadow: 0 18px 40px -22px rgba(0, 0, 0, .8); color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #171215; --surface: #211a1e; --blush: #2c2026; --ink: #f4ecef; --muted: #b5a6ae;
-    --line: #3a2c33; --rose: #e48aa8; --rose-deep: #f2a9c1; --on-rose: #2a1119;
-    --screen-a: #9c3f61; --screen-b: #4a1a2d; color-scheme: dark;
+    --bg: #160e12; --paper: #20151b; --blush: #2b1b23; --blush-2: #3a2430; --ink: #f7ecef; --muted: #c0a9b4;
+    --line: #3b2832; --rose: #ec7fa3; --rose-ink: #2a0f1b; --plum: #f4c9d7; --gold: #e2bb74; --gold-soft: #3a2d18;
+    --shadow: 0 18px 40px -22px rgba(0, 0, 0, .8); color-scheme: dark;
   }
 
   * { box-sizing: border-box; }
-  body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.55; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
   a { color: var(--rose); }
-  a:focus-visible, button:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; border-radius: 6px; }
-  h1, h2, h3 { text-wrap: balance; }
+  :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 8px; }
+  h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; font-weight: 700; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding-inline: max(16px, 4vw); }
+  .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
+  .sass { font-family: var(--display); font-style: italic; font-weight: 500; }
 
-  /* Hero */
-  .hero { background: var(--blush); border-bottom: 3px solid var(--rose); }
-  .hero .wrap { display: flex; gap: 28px; align-items: center; padding-block: 48px 40px; flex-wrap: wrap; }
-  .avatar { flex: 0 0 auto; width: 120px; height: 120px; border-radius: 50%; background: var(--rose); color: var(--on-rose);
-    display: grid; place-items: center; font-family: var(--display); font-size: 44px; box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--rose); }
-  .hero-text { flex: 1 1 420px; min-width: 0; }
-  .kicker { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
-  h1 { font-family: var(--display); font-size: clamp(40px, 7vw, 64px); line-height: 1.02; color: var(--rose); margin: 6px 0 10px; }
-  .tagline { font-size: 18px; font-weight: 500; margin: 0 0 14px; max-width: 34em; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; }
-  .chips li { background: var(--rose); color: var(--on-rose); font-size: 13px; font-weight: 600; border-radius: 999px; padding: 4px 12px; }
-  .contact-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-  .btn { font: 600 14px var(--body); border-radius: 999px; padding: 9px 16px; border: 1.5px solid var(--rose); background: var(--surface); color: var(--rose); text-decoration: none; cursor: pointer; }
-  .btn.primary { background: var(--rose); color: var(--on-rose); }
-  .btn:hover { filter: brightness(1.06); }
+  /* ---------- Top bar ---------- */
+  .topbar { position: sticky; top: 0; z-index: 20; padding-top: env(safe-area-inset-top, 0px);
+    background: color-mix(in srgb, var(--bg) 86%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; }
+  .brand { font-family: var(--display); font-weight: 700; font-size: 20px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .brand i { color: var(--rose); }
+  .topnav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; min-width: 0; }
+  .topnav::-webkit-scrollbar { display: none; }
+  .topnav a { flex: 0 0 auto; font-size: 14px; font-weight: 600; color: var(--muted); text-decoration: none; padding: 6px 12px; border-radius: 999px; }
+  .topnav a:hover { background: var(--blush); color: var(--rose); }
+  .topnav a.cta { background: var(--rose); color: var(--rose-ink); }
 
-  /* Proof strip */
-  .proof { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; padding-block: 32px 8px; }
-  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 12px; text-align: center; }
-  .stat b { display: block; font-family: var(--display); font-size: 34px; line-height: 1.05; color: var(--rose); font-variant-numeric: tabular-nums; }
-  .stat span { font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-  .fine { font-size: 13px; color: var(--muted); margin: 8px 0 0; max-width: 70em; }
+  /* ---------- Hero ---------- */
+  .hero { position: relative; overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: -20% -10% auto auto; width: 620px; height: 620px; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--blush-2), transparent 65%); z-index: 0; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 64px); align-items: center; padding-block: clamp(40px, 7vw, 88px) clamp(32px, 5vw, 56px); }
+  .hero h1 { font-size: clamp(48px, 8.5vw, 104px); line-height: .95; letter-spacing: -.02em; color: var(--plum); }
+  .hero h1 .amp { color: var(--rose); font-style: italic; font-weight: 500; }
+  .hero .lede { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; margin: 18px 0 14px; color: var(--ink); }
+  .hero .lede em { color: var(--rose); }
+  .hero .sub { color: var(--muted); max-width: 36em; margin: 0 0 22px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0 0 26px; }
+  .chips li { font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); }
+  .chips li b { color: var(--rose); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; font: 700 15px var(--body); padding: 12px 20px; border-radius: 999px; border: 1.5px solid var(--ink);
+    background: transparent; color: var(--ink); text-decoration: none; cursor: pointer; transition: transform .15s ease, background .15s ease; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.primary { background: var(--rose); border-color: var(--rose); color: var(--rose-ink); }
+  .btn svg { width: 18px; height: 18px; }
 
-  nav.shelves { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); margin-top: 28px; }
-  nav.shelves .wrap { display: flex; gap: 6px; overflow-x: auto; padding-block: 10px; scrollbar-width: none; }
-  nav.shelves a { flex: 0 0 auto; font-size: 14px; font-weight: 600; text-decoration: none; color: var(--muted); padding: 6px 12px; border-radius: 999px; }
-  nav.shelves a:hover { background: var(--blush); color: var(--rose); }
+  .portrait { position: relative; justify-self: center; width: min(100%, 400px); }
+  .arch { aspect-ratio: 4 / 5; border-radius: 999px 999px 28px 28px; overflow: hidden; border: 6px solid var(--paper);
+    box-shadow: 0 0 0 1.5px var(--gold), var(--shadow); background: var(--blush); }
+  .arch img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .sticker { position: absolute; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 10px 14px; box-shadow: var(--shadow);
+    font-size: 13px; font-weight: 600; line-height: 1.3; }
+  .sticker b { display: block; font-family: var(--display); font-size: 26px; color: var(--rose); line-height: 1; font-variant-numeric: tabular-nums; }
+  .sticker.s1 { left: -8%; bottom: 14%; transform: rotate(-4deg); }
+  .sticker.s2 { right: -6%; top: 10%; transform: rotate(5deg); background: var(--gold-soft); border-color: transparent; }
+  .sticker.s2 b { color: var(--plum); font-size: 18px; }
 
-  section.shelf { padding-block: 36px 8px; scroll-margin-top: 64px; }
-  .shelf-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 18px; }
-  h2 { font-family: var(--display); font-size: 30px; margin: 0; }
-  .shelf-head p { margin: 0; color: var(--muted); font-size: 14px; }
+  /* ---------- Marquee ---------- */
+  .marquee { background: var(--plum); color: var(--bg); overflow: hidden; border-block: 1px solid var(--plum); }
+  .marquee-track { display: flex; gap: 44px; width: max-content; padding-block: 14px; animation: slide 38s linear infinite; }
+  .marquee span { font-family: var(--display); font-style: italic; font-size: 20px; white-space: nowrap; }
+  .marquee span::after { content: "✦"; font-style: normal; color: var(--gold); margin-left: 44px; }
+  @keyframes slide { to { transform: translateX(-50%); } }
 
-  /* Reel tiles */
-  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
-  .tile { display: flex; flex-direction: column; gap: 10px; text-decoration: none; color: var(--ink); min-width: 0; }
-  .screen { position: relative; aspect-ratio: 9 / 14; max-width: 100%; border-radius: 22px; padding: 18px 16px; overflow: hidden;
-    background: linear-gradient(160deg, var(--screen-a), var(--screen-b)); color: #fff; display: flex; flex-direction: column; justify-content: space-between;
-    box-shadow: 0 0 0 5px var(--surface), 0 0 0 6px var(--line); transition: transform .18s ease; }
-  .tile:hover .screen { transform: translateY(-3px); }
-  .screen .plat { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; opacity: 0.9; }
-  .screen .hook { font-family: var(--display); font-style: italic; font-size: 21px; line-height: 1.2; }
-  .screen .play { width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.22); display: grid; place-items: center; align-self: flex-start; }
-  .screen .play::before { content: ""; border-left: 14px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 4px; }
-  .meta b { display: block; font-size: 15px; }
-  .meta span { font-size: 13px; color: var(--muted); }
-  .feature { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 28px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
-  .feature .why { min-width: 0; }
-  .feature h3 { font-family: var(--display); font-size: 26px; margin: 4px 0 8px; }
-  .feature ul { margin: 10px 0 16px; padding-left: 18px; }
+  /* ---------- Stats ---------- */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; padding-block: 48px 10px; }
+  .stat { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 18px 18px 16px; }
+  .stat b { display: block; font-family: var(--display); font-size: clamp(36px, 4.4vw, 48px); line-height: 1; color: var(--plum); font-variant-numeric: tabular-nums; }
+  .stat span { display: block; margin-top: 8px; font-size: 13px; font-weight: 700; color: var(--muted); }
+  .stat em { display: block; margin-top: 6px; font-family: var(--display); font-size: 15px; color: var(--rose); }
+  .fine { font-size: 13px; color: var(--muted); max-width: 75em; margin: 12px 0 0; }
 
-  /* Offer */
-  .offer { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
-  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px; min-width: 0; }
-  .panel h3 { font-family: var(--display); font-size: 22px; margin: 0 0 12px; }
+  /* ---------- Sections ---------- */
+  section { padding-block: clamp(56px, 8vw, 96px) 0; scroll-margin-top: 70px; }
+  .head { display: flex; justify-content: space-between; align-items: end; gap: 16px 32px; flex-wrap: wrap; margin-bottom: 28px; }
+  .head h2 { font-size: clamp(34px, 5vw, 56px); line-height: 1.02; color: var(--plum); }
+  .head h2 em { color: var(--rose); font-weight: 500; }
+  .head p { margin: 0; max-width: 30em; color: var(--muted); }
+
+  /* ---------- Featured ---------- */
+  .feature { display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center;
+    background: var(--paper); border: 1px solid var(--line); border-radius: 28px; padding: clamp(18px, 3vw, 36px); box-shadow: var(--shadow); }
+  .feature h3 { font-size: clamp(26px, 3vw, 36px); line-height: 1.1; color: var(--plum); margin-bottom: 12px; }
+  .ratio { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin: 18px 0; }
+  .ratio b { font-family: var(--display); font-size: clamp(44px, 6vw, 64px); color: var(--rose); line-height: 1; font-variant-numeric: tabular-nums; }
+  .ratio span { color: var(--muted); font-weight: 600; }
+  .ticks { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 10px; }
+  .ticks li { padding-left: 28px; position: relative; }
+  .ticks li::before { content: "✦"; position: absolute; left: 0; color: var(--gold); }
+
+  /* ---------- Video wall ---------- */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .filters button { font: 700 14px var(--body); padding: 8px 16px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--paper); color: var(--muted); cursor: pointer; }
+  .filters button[aria-pressed="true"] { background: var(--plum); border-color: var(--plum); color: var(--bg); }
+  .wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 22px 18px; }
+  .card { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .card[hidden] { display: none; }
+  .phone { position: relative; aspect-ratio: 9 / 16; width: 100%; border-radius: 26px; overflow: hidden; padding: 0; border: 0; cursor: pointer;
+    background: var(--plum); box-shadow: 0 0 0 5px var(--paper), 0 0 0 6.5px var(--line), var(--shadow); transition: transform .2s ease, box-shadow .2s ease; color: #fff; text-align: left; }
+  .phone:hover { transform: translateY(-5px) rotate(-.6deg); box-shadow: 0 0 0 5px var(--paper), 0 0 0 6.5px var(--gold), var(--shadow); }
+  .phone img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .phone.wide .bg { filter: blur(18px) saturate(1.2); transform: scale(1.3); opacity: .85; }
+  .phone.wide .fg { inset: 50% 0 auto 0; height: auto; transform: translateY(-50%); object-fit: contain; }
+  .phone::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,8,14,.55) 0%, transparent 28%, transparent 52%, rgba(20,8,14,.85) 100%); }
+  .phone .plat { position: absolute; z-index: 1; top: 12px; left: 12px; font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    background: rgba(255,255,255,.18); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); padding: 5px 9px; border-radius: 999px; }
+  .phone .hook { position: absolute; z-index: 1; left: 14px; right: 14px; bottom: 16px; font-family: var(--display); font-style: italic; font-size: 18px; line-height: 1.2; text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+  .phone .play { position: absolute; z-index: 1; top: 50%; left: 50%; width: 58px; height: 58px; margin: -29px 0 0 -29px; border-radius: 50%;
+    background: rgba(255,255,255,.92); display: grid; place-items: center; transition: transform .2s ease; }
+  .phone .play::before { content: ""; border-left: 17px solid var(--rose); border-top: 11px solid transparent; border-bottom: 11px solid transparent; margin-left: 5px; }
+  .phone:hover .play { transform: scale(1.1); }
+  .meta b { display: block; font-size: 15.5px; line-height: 1.3; }
+  .meta span { font-size: 13.5px; color: var(--muted); }
+
+  /* ---------- Rulebook (quotes) ---------- */
+  .rulebook { background: var(--plum); color: var(--bg); border-radius: 36px; margin-top: clamp(56px, 8vw, 96px); padding: clamp(32px, 5vw, 64px) clamp(20px, 4vw, 56px); }
+  .rulebook .eyebrow { color: var(--gold); }
+  .rulebook h2 { font-size: clamp(34px, 5vw, 56px); line-height: 1.02; margin-bottom: 30px; }
+  .rulebook h2 em { color: var(--gold); font-weight: 500; }
+  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .quote { margin: 0; padding: 22px 22px 18px; border-radius: 22px; background: color-mix(in srgb, var(--bg) 9%, transparent); border: 1px solid color-mix(in srgb, var(--bg) 18%, transparent); display: flex; flex-direction: column; gap: 14px; justify-content: space-between; }
+  .quote p { margin: 0; font-family: var(--display); font-size: 22px; line-height: 1.25; }
+  .quote p::before { content: "“"; color: var(--gold); }
+  .quote p::after { content: "”"; color: var(--gold); }
+  .quote small { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  .quote.big { grid-column: span 2; background: var(--gold-soft); color: var(--plum); border-color: transparent; }
+  .quote.big p { font-size: clamp(26px, 3.2vw, 36px); }
+  .quote.big small { color: var(--rose); }
+
+  /* ---------- Two brains ---------- */
+  .brains { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .brain { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 26px; }
+  .brain h3 { font-size: 26px; color: var(--plum); margin-bottom: 10px; }
+  .brain p { margin: 0 0 10px; color: var(--muted); }
+  .brain .sass { color: var(--rose); font-size: 19px; margin: 14px 0 0; }
+
+  /* ---------- Off camera ---------- */
+  .loves { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+  .love { position: relative; border-radius: 24px; padding: 24px 22px 22px; background: var(--blush); overflow: hidden; }
+  .love:nth-child(2) { background: var(--gold-soft); }
+  .love:nth-child(3) { background: var(--blush-2); }
+  .love:nth-child(4) { background: var(--paper); border: 1px solid var(--line); }
+  .love svg { width: 38px; height: 38px; color: var(--rose); margin-bottom: 14px; }
+  .love h3 { font-size: 22px; color: var(--plum); margin-bottom: 8px; }
+  .love p { margin: 0; color: var(--ink); font-size: 15px; }
+
+  /* ---------- Work with me ---------- */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; counter-reset: step; margin-bottom: 18px; }
+  .step { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 22px; counter-increment: step; }
+  .step::before { content: "0" counter(step); font-family: var(--display); font-size: 34px; color: var(--gold); line-height: 1; display: block; margin-bottom: 10px; }
+  .step h3 { font-size: 20px; color: var(--plum); margin-bottom: 6px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; }
+  .offer { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 24px; min-width: 0; }
+  .panel h3 { font-size: 24px; color: var(--plum); margin-bottom: 14px; }
   .formats { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
-  .formats li { background: var(--blush); border-radius: 999px; padding: 4px 12px; font-size: 14px; }
-  table.rates { width: 100%; border-collapse: collapse; font-size: 14.5px; }
-  .rates td { padding: 9px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
-  .rates td:last-child { text-align: right; font-weight: 600; white-space: nowrap; }
+  .formats li { background: var(--blush); border-radius: 999px; padding: 6px 13px; font-size: 14px; font-weight: 600; }
+  table.rates { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .rates td { padding: 11px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .rates tr:last-child td { border-bottom: 0; }
+  .rates td:last-child { text-align: right; font-weight: 800; white-space: nowrap; color: var(--rose); }
 
-  footer.contact { margin-top: 44px; background: var(--rose); color: var(--on-rose); }
-  footer.contact .wrap { padding-block: 34px; display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; align-items: center; }
-  footer.contact p { margin: 0; }
-  footer.contact .big { font-family: var(--display); font-size: 26px; }
-  footer.contact .addr { font-weight: 600; user-select: all; }
-  footer.contact a { color: var(--on-rose); font-weight: 600; }
-  footer.contact .btn { background: var(--on-rose); color: var(--rose); border-color: var(--on-rose); }
+  /* ---------- Footer ---------- */
+  footer { margin-top: clamp(64px, 9vw, 110px); background: var(--rose); color: var(--rose-ink); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  footer .wrap { padding-block: clamp(40px, 6vw, 72px); display: grid; gap: 22px; }
+  footer h2 { font-size: clamp(34px, 6vw, 68px); line-height: 1; }
+  footer h2 em { font-weight: 500; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  footer .addr { font-weight: 700; font-size: 18px; user-select: all; overflow-wrap: anywhere; }
+  footer .btn { border-color: var(--rose-ink); color: var(--rose-ink); }
+  footer .btn.primary { background: var(--rose-ink); color: var(--rose); }
+  footer .small { font-size: 13px; opacity: .85; margin: 0; }
 
-  @media (max-width: 640px) {
-    .hero .wrap { padding-block: 32px 28px; }
+  /* ---------- Player ---------- */
+  dialog.player { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; overflow: visible; }
+  dialog.player::backdrop { background: rgba(18, 6, 12, .82); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .player-box { position: relative; display: grid; gap: 12px; justify-items: center; }
+  .frame { border-radius: 22px; overflow: hidden; background: #000; box-shadow: 0 30px 80px -20px rgba(0,0,0,.7); }
+  .frame iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .frame.v { width: min(92vw, calc(84vh * 9 / 16)); aspect-ratio: 9 / 16; }
+  .frame.h { width: min(94vw, 960px); aspect-ratio: 16 / 9; }
+  .frame.ig { width: min(92vw, 400px); height: min(84vh, 720px); background: #fff; }
+  .player-bar { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .player-bar a, .player-bar button { font: 700 14px var(--body); color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3); padding: 8px 16px; border-radius: 999px; text-decoration: none; cursor: pointer; }
+
+  /* ---------- Reveal ---------- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .portrait { width: min(78%, 340px); order: -1; }
     .feature { grid-template-columns: 1fr; }
-    .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-    .screen .hook { font-size: 17px; }
+    .feature .phone-wrap { max-width: 300px; }
+    .quote.big { grid-column: auto; }
+    .topnav a:not(.cta) { display: none; }
   }
-  @media (prefers-reduced-motion: reduce) { .screen { transition: none; } .tile:hover .screen { transform: none; } }
+  @media (max-width: 520px) {
+    .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; }
+    .phone { border-radius: 20px; }
+    .phone .hook { font-size: 15px; left: 10px; right: 10px; bottom: 12px; }
+    .phone .play { width: 46px; height: 46px; margin: -23px 0 0 -23px; }
+    .sticker.s1 { left: -4%; } .sticker.s2 { right: -4%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .marquee-track { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .phone, .btn, .phone .play { transition: none; }
+  }
 </style>
 </head>
 <body>
 
-<header class="hero">
+<header class="topbar">
   <div class="wrap">
-    <div class="avatar" aria-hidden="true">AS</div>
-    <div class="hero-text">
-      <p class="kicker">UGC &amp; on-camera creator · Portfolio</p>
-      <h1>Aditi Singh</h1>
-      <p class="tagline">I make short videos about skincare, makeup and budget fashion, in Hindi, English and Hinglish, for fashion, jewellery and beauty brands.</p>
-      <ul class="chips">
-        <li>Hindi · English · Hinglish</li>
-        <li>Remote · New Delhi</li>
-        <li>Shoots &amp; edits in CapCut</li>
-      </ul>
-      <div class="contact-row">
-        <button class="btn primary" type="button" id="copy-email-top" data-email="aditi.singh281003@gmail.com">Copy email</button>
-        <a class="btn" href="https://www.instagram.com/k25diti/" target="_blank" rel="noopener">Instagram @k25diti</a>
-        <a class="btn" href="https://www.youtube.com/@onlybyaditi" target="_blank" rel="noopener">YouTube @onlybyaditi</a>
-      </div>
-    </div>
+    <a class="brand" href="#top">Aditi <i>Singh</i></a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#rulebook">Rulebook</a>
+      <a href="#about">About</a>
+      <a href="#hire">Rates</a>
+      <a class="cta" href="#contact">Let's talk</a>
+    </nav>
   </div>
 </header>
 
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">UGC &amp; on-camera creator · Delhi NCR · Remote</p>
+      <h1>Aditi <span class="amp">Singh</span></h1>
+      <p class="lede sass">Scroll <em>rukega.</em> Sale <em>badhegi.</em></p>
+      <p class="sub">I make short videos about skincare, makeup, jewellery and budget fashion, in Hindi, English and Hinglish, the way your customer actually talks. I script, shoot and edit everything myself.</p>
+      <ul class="chips">
+        <li><b>2.1M</b> Reel views / 30 days</li>
+        <li>Hindi · English · Hinglish</li>
+        <li>Shot &amp; edited in CapCut</li>
+      </ul>
+      <div class="actions">
+        <a class="btn primary" href="#work">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch my work</a>
+        <button class="btn" type="button" data-email="aditi.singh281003@gmail.com">Copy email</button>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="arch"><img src="media/aditi.jpg" alt="Aditi Singh, smiling, wearing clear-frame glasses" width="480" height="480"></div>
+      <div class="sticker s1"><b>1.4M</b>people watched<br>last month</div>
+      <div class="sticker s2"><b>Talks to camera,</b>not at it.</div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Hook in 2 seconds or it didn't happen</span><span>Saves are the new likes</span><span>Desi skin, real routines</span><span>Budget hai, taste nahi</span><span>Reach is rented, trust is owned</span><span>Every Reel is an A/B test in lip gloss</span>
+    <span>Hook in 2 seconds or it didn't happen</span><span>Saves are the new likes</span><span>Desi skin, real routines</span><span>Budget hai, taste nahi</span><span>Reach is rented, trust is owned</span><span>Every Reel is an A/B test in lip gloss</span>
+  </div>
+</div>
+
 <main>
   <div class="wrap">
-    <div class="proof" aria-label="Instagram performance, last 30 days">
-      <div class="stat"><b>2.1M</b><span>Reel views</span></div>
-      <div class="stat"><b>1.4M</b><span>Unique viewers</span></div>
-      <div class="stat"><b>6.1%</b><span>Engagement on viewers</span></div>
-      <div class="stat"><b>60</b><span>Reels in 30 days</span></div>
-      <div class="stat"><b>103</b><span>YouTube videos</span></div>
+    <div class="stats" aria-label="Instagram performance, last 30 days">
+      <div class="stat"><b data-count="2.1" data-suffix="M" data-dec="1">2.1M</b><span>Reel views</span><em>in 30 days</em></div>
+      <div class="stat"><b data-count="1.4" data-suffix="M" data-dec="1">1.4M</b><span>Unique viewers</span><em>mostly strangers, not followers</em></div>
+      <div class="stat"><b data-count="6.1" data-suffix="%" data-dec="1">6.1%</b><span>Engagement on viewers</span><em>they didn't just watch</em></div>
+      <div class="stat"><b data-count="60" data-suffix="" data-dec="0">60</b><span>Reels in 30 days</span><em>consistency is a skill</em></div>
+      <div class="stat"><b data-count="7.4" data-suffix="K" data-dec="1">7.4K</b><span>Shares</span><em>sent to the group chat</em></div>
     </div>
-    <p class="fine">Instagram Insights, 11 Sep – 11 Oct 2026. Engagement = (likes + comments + shares + saves) ÷ unique viewers = 85.5K ÷ 1.4M. YouTube figures as of 12 Oct 2026. Followers: 741 on Instagram, 316 on YouTube; most of my reach comes from Instagram recommending my Reels to new viewers. All products in these videos were bought by me. They are independent reviews, not sponsored posts.</p>
-  </div>
+    <p class="fine">Instagram Insights, 11 Sep – 11 Oct 2026. Engagement = (likes + comments + shares + saves) ÷ unique viewers = 85.5K ÷ 1.4M. Followers: 741 on Instagram, 316 on YouTube. Most of my reach comes from Instagram recommending my Reels to new people, which is exactly what a brand's ad needs to do. Every product in these videos was bought by me: independent reviews, never sponsored posts.</p>
 
-  <nav class="shelves" aria-label="Portfolio sections">
-    <div class="wrap">
-      <a href="#best">Best piece</a>
-      <a href="#skincare">Skincare</a>
-      <a href="#makeup">Makeup</a>
-      <a href="#hair-fragrance">Hair &amp; fragrance</a>
-      <a href="#fashion">Fashion &amp; lifestyle</a>
-      <a href="#on-camera">On-camera reach</a>
-      <a href="#work-with-me">Work with me</a>
-    </div>
-  </nav>
-
-  <div class="wrap">
-    <section class="shelf" id="best">
-      <div class="shelf-head"><h2>Best piece</h2><p>Start here</p></div>
+    <!-- Featured -->
+    <section id="best" class="reveal">
+      <div class="head">
+        <div><p class="eyebrow">Start here</p><h2>The Reel that made people <em>ask for the link</em></h2></div>
+      </div>
       <div class="feature">
-        <a class="tile" href="https://www.instagram.com/reel/DX4fxgBC-us/" target="_blank" rel="noopener" aria-label="Watch the skincare serum Reel on Instagram">
-          <div class="screen"><span class="plat">Instagram Reel · Skincare</span><span class="hook">"Don't miss out on this amazing product"</span><span class="play" aria-hidden="true"></span></div>
-        </a>
-        <div class="why">
-          <p class="kicker">Product find · comment-for-link</p>
-          <h3>A serum Reel that got people asking for the product</h3>
-          <p>I showed a serum I use and asked viewers to comment for the link.</p>
-          <ul>
-            <li><b>72 comments against 51 likes.</b> More people asked for the product than tapped like.</li>
-            <li>Talking to camera, a clear call to action, product in hand</li>
-            <li>The same format works as a UGC ad for any skincare or beauty brand</li>
+        <div class="phone-wrap">
+          <button class="phone" type="button" data-kind="ig" data-id="DX4fxgBC-us" aria-label="Play: serum Reel, Instagram">
+            <img src="media/ig-DX4fxgBC-us.jpg" alt="" loading="lazy">
+            <span class="plat">Instagram Reel</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Don't miss out on this amazing product"</span>
+          </button>
+        </div>
+        <div>
+          <p class="eyebrow">Skincare · comment-for-link</p>
+          <h3>One serum, one clear ask, and the comments did the selling.</h3>
+          <p>I showed a serum I actually use and asked viewers to comment for the link. No fancy set, just product in hand and a reason to act.</p>
+          <div class="ratio"><b>72 : 51</b><span>comments to likes. More people asked to buy than tapped the heart.</span></div>
+          <ul class="ticks">
+            <li>Talk-to-camera hook, product on screen in the first second</li>
+            <li>One call to action, not five</li>
+            <li>Drop-in ready as a UGC ad for any skincare or beauty brand</li>
           </ul>
-          <a class="btn primary" href="https://www.instagram.com/reel/DX4fxgBC-us/" target="_blank" rel="noopener">Watch on Instagram</a>
         </div>
       </div>
     </section>
 
-    <section class="shelf" id="skincare">
-      <div class="shelf-head"><h2>Skincare</h2><p>Reviews, routines and a two-part series</p></div>
-      <div class="tiles">
-        <a class="tile" href="https://www.youtube.com/shorts/5wp-aaET6Vg" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube Short · 28 s</span><span class="hook">"Best barrier repair cream of 2026 for me"</span><span class="play" aria-hidden="true"></span></div>
+    <!-- Video wall -->
+    <section id="work">
+      <div class="head reveal">
+        <div><p class="eyebrow">The video wall</p><h2>Tap a card. <em>It plays right here.</em></h2></div>
+        <p>Reviews, routines, hauls and trend Reels across Instagram and YouTube. Pick a shelf.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filter videos">
+        <button type="button" aria-pressed="true" data-filter="all">All</button>
+        <button type="button" aria-pressed="false" data-filter="skincare">Skincare</button>
+        <button type="button" aria-pressed="false" data-filter="makeup">Makeup</button>
+        <button type="button" aria-pressed="false" data-filter="hair">Hair &amp; fragrance</button>
+        <button type="button" aria-pressed="false" data-filter="fashion">Fashion &amp; lifestyle</button>
+        <button type="button" aria-pressed="false" data-filter="reach">Trend &amp; reach</button>
+      </div>
+
+      <div class="wall">
+        <article class="card" data-cat="skincare">
+          <button class="phone" type="button" data-kind="yt" data-orient="v" data-id="5wp-aaET6Vg" aria-label="Play: barrier-repair cream review">
+            <img src="media/yt-5wp-aaET6Vg.jpg" alt="" loading="lazy"><span class="plat">YT Short · 28s</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Best barrier repair cream of 2026 for me"</span></button>
           <div class="meta"><b>Barrier-repair cream review</b><span>Product review · 1.5K views</span></div>
-        </a>
-        <a class="tile" href="https://www.instagram.com/reel/DXkLAZ7AdEC/" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">Instagram Reel · Series</span><span class="hook">"Check the results in part 2"</span><span class="play" aria-hidden="true"></span></div>
-          <div class="meta"><b>Damaged skin barrier, part 1</b><span>Two-part format · 177 likes, 29 comments</span></div>
-        </a>
-        <a class="tile" href="https://www.youtube.com/shorts/YyDIQSTtiTI" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube Short · 55 s</span><span class="hook">"Reviewing Innisfree super volcanic clay mask"</span><span class="play" aria-hidden="true"></span></div>
-          <div class="meta"><b>Innisfree clay mask review</b><span>Branded product review · 205 views</span></div>
-        </a>
-        <a class="tile" href="https://www.youtube.com/watch?v=KTEu2nuhtuI" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube video</span><span class="hook">"Basic morning skincare for beginners"</span><span class="play" aria-hidden="true"></span></div>
-          <div class="meta"><b>Beginner morning routine</b><span>Talking-to-camera tutorial · 810 views</span></div>
-        </a>
-      </div>
-    </section>
+        </article>
+        <article class="card" data-cat="skincare">
+          <button class="phone" type="button" data-kind="ig" data-id="DXkLAZ7AdEC" aria-label="Play: damaged skin barrier part 1">
+            <img src="media/ig-DXkLAZ7AdEC.jpg" alt="" loading="lazy"><span class="plat">Reel · Series</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Check the results in part 2"</span></button>
+          <div class="meta"><b>Damaged skin barrier, part 1</b><span>Two-part cliffhanger · 177 likes, 29 comments</span></div>
+        </article>
+        <article class="card" data-cat="skincare">
+          <button class="phone" type="button" data-kind="yt" data-orient="v" data-id="YyDIQSTtiTI" aria-label="Play: Innisfree clay mask review">
+            <img src="media/yt-YyDIQSTtiTI.jpg" alt="" loading="lazy"><span class="plat">YT Short · 55s</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Reviewing Innisfree super volcanic clay mask"</span></button>
+          <div class="meta"><b>Innisfree clay mask review</b><span>Branded product review</span></div>
+        </article>
+        <article class="card" data-cat="skincare">
+          <button class="phone wide" type="button" data-kind="yt" data-orient="h" data-id="KTEu2nuhtuI" aria-label="Play: beginner morning skincare">
+            <img class="bg" src="media/yt-KTEu2nuhtuI.jpg" alt="" loading="lazy"><img class="fg" src="media/yt-KTEu2nuhtuI.jpg" alt="" loading="lazy"><span class="plat">YouTube</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Basic morning skincare for beginners"</span></button>
+          <div class="meta"><b>Beginner morning routine</b><span>Talk-to-camera tutorial · 810 views</span></div>
+        </article>
 
-    <section class="shelf" id="makeup">
-      <div class="shelf-head"><h2>Makeup</h2><p>Budget picks and tutorials for Indian skin</p></div>
-      <div class="tiles">
-        <a class="tile" href="https://www.youtube.com/shorts/7JfuRPZdVU8" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube Short · 86 s</span><span class="hook">"Indian skin friendly lip combo under ₹300"</span><span class="play" aria-hidden="true"></span></div>
+        <article class="card" data-cat="makeup">
+          <button class="phone" type="button" data-kind="yt" data-orient="v" data-id="7JfuRPZdVU8" aria-label="Play: lip combo under 300 rupees">
+            <img src="media/yt-7JfuRPZdVU8.jpg" alt="" loading="lazy"><span class="plat">YT Short · 86s</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Indian skin friendly lip combo under ₹300"</span></button>
           <div class="meta"><b>Lip combo under ₹300</b><span>Budget makeup · 1K views</span></div>
-        </a>
-        <a class="tile" href="https://www.youtube.com/watch?v=-v8O5y9TsIc" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube video</span><span class="hook">"My daily simple makeup tutorial"</span><span class="play" aria-hidden="true"></span></div>
+        </article>
+        <article class="card" data-cat="makeup">
+          <button class="phone wide" type="button" data-kind="yt" data-orient="h" data-id="-v8O5y9TsIc" aria-label="Play: daily simple makeup tutorial">
+            <img class="bg" src="media/yt--v8O5y9TsIc.jpg" alt="" loading="lazy"><img class="fg" src="media/yt--v8O5y9TsIc.jpg" alt="" loading="lazy"><span class="plat">YouTube</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"My daily simple makeup tutorial"</span></button>
           <div class="meta"><b>Daily makeup tutorial</b><span>Step-by-step, talking to camera</span></div>
-        </a>
-        <a class="tile" href="https://www.youtube.com/watch?v=WFZsbVtNJP0" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube video</span><span class="hook">"GRWM for college: skincare and makeup"</span><span class="play" aria-hidden="true"></span></div>
+        </article>
+        <article class="card" data-cat="makeup">
+          <button class="phone wide" type="button" data-kind="yt" data-orient="h" data-id="WFZsbVtNJP0" aria-label="Play: get ready with me for college">
+            <img class="bg" src="media/yt-WFZsbVtNJP0.jpg" alt="" loading="lazy"><img class="fg" src="media/yt-WFZsbVtNJP0.jpg" alt="" loading="lazy"><span class="plat">YouTube</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"GRWM for college: skincare and makeup"</span></button>
           <div class="meta"><b>Get ready with me</b><span>GRWM format · 704 views</span></div>
-        </a>
-      </div>
-    </section>
+        </article>
 
-    <section class="shelf" id="hair-fragrance">
-      <div class="shelf-head"><h2>Haircare &amp; fragrance</h2><p>Product picks beyond skincare</p></div>
-      <div class="tiles">
-        <a class="tile" href="https://www.youtube.com/shorts/hcp5VvnNIgo" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube Short · 46 s</span><span class="hook">Haircare products</span><span class="play" aria-hidden="true"></span></div>
+        <article class="card" data-cat="hair">
+          <button class="phone" type="button" data-kind="yt" data-orient="v" data-id="hcp5VvnNIgo" aria-label="Play: haircare products">
+            <img src="media/yt-hcp5VvnNIgo.jpg" alt="" loading="lazy"><span class="plat">YT Short · 46s</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">Haircare products I use</span></button>
           <div class="meta"><b>Haircare products</b><span>Product showcase · 325 views</span></div>
-        </a>
-        <a class="tile" href="https://www.instagram.com/reel/DY5EljOhu19/" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">Instagram Reel</span><span class="hook">"Let me know if you want more videos around fragrance"</span><span class="play" aria-hidden="true"></span></div>
+        </article>
+        <article class="card" data-cat="hair">
+          <button class="phone" type="button" data-kind="ig" data-id="DY5EljOhu19" aria-label="Play: attar perfume oil review">
+            <img src="media/ig-DY5EljOhu19.jpg" alt="" loading="lazy"><span class="plat">Reel · Fragrance</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Let me know if you want more videos around fragrance"</span></button>
           <div class="meta"><b>Attar / perfume oil</b><span>Fragrance review · musk tahara</span></div>
-        </a>
-      </div>
-    </section>
+        </article>
 
-    <section class="shelf" id="fashion">
-      <div class="shelf-head"><h2>Fashion &amp; lifestyle</h2><p>Hauls and everyday style</p></div>
-      <div class="tiles">
-        <a class="tile" href="https://www.youtube.com/watch?v=kOzvGqEhmQY" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube video</span><span class="hook">"Zudio haul under budget"</span><span class="play" aria-hidden="true"></span></div>
+        <article class="card" data-cat="fashion">
+          <button class="phone wide" type="button" data-kind="yt" data-orient="h" data-id="kOzvGqEhmQY" aria-label="Play: Zudio haul under budget">
+            <img class="bg" src="media/yt-kOzvGqEhmQY.jpg" alt="" loading="lazy"><img class="fg" src="media/yt-kOzvGqEhmQY.jpg" alt="" loading="lazy"><span class="plat">YouTube</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Zudio haul under budget"</span></button>
           <div class="meta"><b>Zudio budget haul + night skincare</b><span>Haul and try-on</span></div>
-        </a>
-        <a class="tile" href="https://www.youtube.com/watch?v=HTEYcwhKTUE" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">YouTube video</span><span class="hook">"What's in my college bag"</span><span class="play" aria-hidden="true"></span></div>
+        </article>
+        <article class="card" data-cat="fashion">
+          <button class="phone wide" type="button" data-kind="yt" data-orient="h" data-id="HTEYcwhKTUE" aria-label="Play: what's in my college bag">
+            <img class="bg" src="media/yt-HTEYcwhKTUE.jpg" alt="" loading="lazy"><img class="fg" src="media/yt-HTEYcwhKTUE.jpg" alt="" loading="lazy"><span class="plat">YouTube</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"What's in my college bag"</span></button>
           <div class="meta"><b>What's in my bag</b><span>Lifestyle · product walkthrough</span></div>
-        </a>
-      </div>
-    </section>
+        </article>
 
-    <section class="shelf" id="on-camera">
-      <div class="shelf-head"><h2>On-camera reach</h2><p>Trend, song and transition Reels: where the 2.1M views come from</p></div>
-      <div class="tiles">
-        <a class="tile" href="https://www.instagram.com/reel/DdHoJKmo-G-/" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">Instagram Reel · Sep 2026</span><span class="hook">Song Reel</span><span class="play" aria-hidden="true"></span></div>
+        <article class="card" data-cat="reach">
+          <button class="phone" type="button" data-kind="ig" data-id="DdHoJKmo-G-" aria-label="Play: song Reel">
+            <img src="media/ig-DdHoJKmo-G-.jpg" alt="" loading="lazy"><span class="plat">Reel · Trend</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">Song Reel, pure vibe</span></button>
           <div class="meta"><b>Song / aesthetic Reel</b><span>2.6K likes, 26 comments</span></div>
-        </a>
-        <a class="tile" href="https://www.instagram.com/reel/DdjW8U6CvI3/" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">Instagram Reel · Sep 2026</span><span class="hook">"Chatpata transition"</span><span class="play" aria-hidden="true"></span></div>
+        </article>
+        <article class="card" data-cat="reach">
+          <button class="phone" type="button" data-kind="ig" data-id="DdjW8U6CvI3" aria-label="Play: chatpata transition Reel">
+            <img src="media/ig-DdjW8U6CvI3.jpg" alt="" loading="lazy"><span class="plat">Reel · Transition</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Chatpata transition"</span></button>
           <div class="meta"><b>Transition Reel</b><span>1.5K likes, 12 comments</span></div>
-        </a>
-        <a class="tile" href="https://www.instagram.com/reel/DdKgFLLT-7-/" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">Instagram Reel · Sep 2026</span><span class="hook">"Kya matlab mujhe chhod dega"</span><span class="play" aria-hidden="true"></span></div>
-          <div class="meta"><b>Expression Reel (Hinglish)</b><span>953 likes</span></div>
-        </a>
-        <a class="tile" href="https://www.instagram.com/reel/DcuSg0Oz5sR/" target="_blank" rel="noopener">
-          <div class="screen"><span class="plat">Instagram Reel · Aug 2026</span><span class="hook">"Tag her in comments"</span><span class="play" aria-hidden="true"></span></div>
+        </article>
+        <article class="card" data-cat="reach">
+          <button class="phone" type="button" data-kind="ig" data-id="DdKgFLLT-7-" aria-label="Play: Hinglish expression Reel">
+            <img src="media/ig-DdKgFLLT-7-.jpg" alt="" loading="lazy"><span class="plat">Reel · Hinglish</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Kya matlab mujhe chhod dega"</span></button>
+          <div class="meta"><b>Expression Reel</b><span>953 likes · just me and a face</span></div>
+        </article>
+        <article class="card" data-cat="reach">
+          <button class="phone" type="button" data-kind="ig" data-id="DcuSg0Oz5sR" aria-label="Play: tag her Reel">
+            <img src="media/ig-DcuSg0Oz5sR.jpg" alt="" loading="lazy"><span class="plat">Reel · Trend</span><span class="play" aria-hidden="true"></span>
+            <span class="hook">"Tag her in comments"</span></button>
           <div class="meta"><b>Song Reel</b><span>Comment-driven caption</span></div>
-        </a>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- Rulebook -->
+  <div class="wrap">
+    <section id="rulebook" class="rulebook reveal">
+      <p class="eyebrow">My content rulebook</p>
+      <h2>Growth tips, with <em>a little attitude.</em></h2>
+      <div class="quotes">
+        <figure class="quote big"><p>Your product doesn't need more ads. It needs a better first two seconds.</p><small>Rule 01 · The hook</small></figure>
+        <figure class="quote"><p>Reach is rented. Trust is owned.</p><small>Rule 02 · Brand</small></figure>
+        <figure class="quote"><p>A like is a compliment. A save is a shopping list.</p><small>Rule 03 · Metrics</small></figure>
+        <figure class="quote"><p>Hook, hold, hand-off. Baaki sab decoration hai.</p><small>Rule 04 · Structure</small></figure>
+        <figure class="quote"><p>Data dekh ke content banao, mood dekh ke nahi.</p><small>Rule 05 · Analytics</small></figure>
+        <figure class="quote"><p>I don't do "sponsored vibes". I do "where did you buy that?" comments.</p><small>Rule 06 · Authenticity</small></figure>
+        <figure class="quote"><p>Budget-friendly isn't a compromise. It's a conversion strategy.</p><small>Rule 07 · Pricing</small></figure>
+        <figure class="quote"><p>Every Reel is an A/B test wearing lip gloss.</p><small>Rule 08 · Testing</small></figure>
+        <figure class="quote big"><p>Followers are a vanity number. Your customer just needs to hear it from someone who sounds like them.</p><small>Rule 09 · Why UGC works</small></figure>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <!-- About: two brains -->
+    <section id="about" class="reveal">
+      <div class="head">
+        <div><p class="eyebrow">The core</p><h2>Creator face. <em>Analyst brain.</em></h2></div>
+        <p>Most creators guess. I check. That's the unfair advantage I bring to your brand.</p>
+      </div>
+      <div class="brains">
+        <div class="brain">
+          <h3>On camera</h3>
+          <p>Talking-to-camera reviews, GRWMs, hauls, tutorials, trend Reels and two-part series. Natural delivery in Hindi, English or a Hinglish mix, matched to your audience.</p>
+          <p>I write the hook, shoot on my phone and edit in CapCut myself, so one person owns the whole thing.</p>
+          <p class="sass">Camera on, nervousness off.</p>
+        </div>
+        <div class="brain">
+          <h3>Off camera</h3>
+          <p>I also work as a Business Analyst &amp; QA consultant, so requirements, testing and reading data are my day job. I read Instagram Insights the way I read a requirements doc.</p>
+          <p>That means briefs get followed, feedback gets one clean revision, and every video has a reason behind it.</p>
+          <p class="sass">Creative chaos, with a spreadsheet behind it.</p>
+        </div>
       </div>
     </section>
 
-    <section class="shelf" id="work-with-me">
-      <div class="shelf-head"><h2>Work with me</h2><p>Freelance or full-time, fully remote</p></div>
+    <!-- Off camera loves -->
+    <section id="loves" class="reveal">
+      <div class="head">
+        <div><p class="eyebrow">Things I'm obsessed with</p><h2>What I'd talk about <em>even if nobody paid me.</em></h2></div>
+        <p>Which is why it sounds real when someone does.</p>
+      </div>
+      <div class="loves">
+        <div class="love">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v5.5L5.5 17a2.5 2.5 0 0 0 2.2 3.7h8.6a2.5 2.5 0 0 0 2.2-3.7L14 8.5V3"/><path d="M7.5 14h9"/></svg>
+          <h3>Ingredient nerding</h3>
+          <p>I read the back of the bottle for fun. Niacinamide and I are on first-name terms.</p>
+        </div>
+        <div class="love">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M9 3l3 18M15 3l-3 18"/></svg>
+          <h3>Jewellery &amp; accessories</h3>
+          <p>Stack it, layer it, mix gold with silver. "Too much" isn't in my dictionary.</p>
+        </div>
+        <div class="love">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4l4 2 4-2 4 4-3 3v9H7v-9L4 8z"/></svg>
+          <h3>Budget fashion &amp; thrifting</h3>
+          <p>Budget hai, taste nahi. A ₹499 find, styled like it cost ten times more.</p>
+        </div>
+        <div class="love">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M16 10h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg>
+          <h3>Chai, coffee, music &amp; dance</h3>
+          <p>Chai first, script second. And yes, there's dancing between takes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hire -->
+    <section id="hire" class="reveal">
+      <div class="head">
+        <div><p class="eyebrow">Work with me</p><h2>From brief to <em>"where can I buy this?"</em></h2></div>
+        <p>Freelance UGC or a full-time creator role, remote or in Delhi NCR (Gurugram works).</p>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Brief</h3><p>You tell me the product, the customer and the one thing they must remember.</p></div>
+        <div class="step"><h3>Hook &amp; script</h3><p>I write the first two seconds first, in the language your buyer scrolls in.</p></div>
+        <div class="step"><h3>Shoot &amp; edit</h3><p>Filmed and cut in CapCut by me: captions, pacing, product close-ups.</p></div>
+        <div class="step"><h3>Deliver &amp; tweak</h3><p>You get the video plus one round of revisions, ready for your page or your ads.</p></div>
+      </div>
       <div class="offer">
         <div class="panel">
           <h3>What I make</h3>
           <ul class="formats">
-            <li>UGC video for your page or ads</li><li>Reel on @k25diti</li><li>YouTube Short</li><li>Product review</li>
-            <li>Haul / try-on</li><li>Get ready with me</li><li>Tutorial</li><li>Multi-part series</li><li>Hindi, English or Hinglish version</li>
+            <li>UGC ads</li><li>Product reviews</li><li>Reels on @k25diti</li><li>YouTube Shorts</li><li>Hauls &amp; try-ons</li>
+            <li>GRWM</li><li>Tutorials</li><li>Multi-part series</li><li>Jewellery styling</li><li>Hindi / English / Hinglish cuts</li>
           </ul>
         </div>
         <div class="panel">
           <h3>Rates</h3>
           <table class="rates">
-            <tr><td>UGC video (up to 60 s, 1 revision)</td><td>from ₹2,000</td></tr>
+            <tr><td>UGC video (up to 60s, 1 revision)</td><td>from ₹2,000</td></tr>
             <tr><td>Paid-ads usage rights</td><td>quoted separately</td></tr>
-            <tr><td>Reel or YouTube Short on my channels</td><td>on request</td></tr>
-            <tr><td>Product-only (barter) collaborations</td><td>considered for niche fit</td></tr>
+            <tr><td>Reel or Short on my channels</td><td>on request</td></tr>
+            <tr><td>Barter collaborations</td><td>if it fits my niche</td></tr>
           </table>
         </div>
       </div>
@@ -303,28 +561,111 @@
   </div>
 </main>
 
-<footer class="contact">
+<footer id="contact">
   <div class="wrap">
-    <div>
-      <p class="big">Let's make something your customers stop scrolling for.</p>
-      <p><span class="addr">aditi.singh281003@gmail.com</span></p>
+    <p class="eyebrow" style="color:inherit;opacity:.85">Let's talk</p>
+    <h2>Let's make your product <em>impossible to scroll past.</em></h2>
+    <div class="row">
+      <span class="addr">aditi.singh281003@gmail.com</span>
+      <button class="btn primary" type="button" data-email="aditi.singh281003@gmail.com">Copy email</button>
     </div>
-    <button class="btn" type="button" id="copy-email-bottom" data-email="aditi.singh281003@gmail.com">Copy email</button>
+    <div class="row">
+      <a class="btn" href="https://www.instagram.com/k25diti/" target="_blank" rel="noopener">Instagram @k25diti</a>
+      <a class="btn" href="https://www.youtube.com/@onlybyaditi" target="_blank" rel="noopener">YouTube @onlybyaditi</a>
+      <a class="btn" href="https://www.linkedin.com/in/aditi-singh-69140134b" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="small">Stats from Instagram Insights and YouTube, October 2026. All reviewed products were bought by me.</p>
   </div>
 </footer>
 
+<dialog class="player" id="player" aria-label="Video player">
+  <div class="player-box">
+    <div class="frame" id="frame"></div>
+    <div class="player-bar">
+      <a id="open-src" href="#" target="_blank" rel="noopener">Open in app ↗</a>
+      <button type="button" id="close-player">Close ✕</button>
+    </div>
+  </div>
+</dialog>
+
 <script>
-  document.querySelectorAll('button[data-email]').forEach(function (btn) {
+(function () {
+  // Copy email
+  document.querySelectorAll('[data-email]').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      var email = btn.getAttribute('data-email');
-      var label = btn.textContent;
-      function done(text) { btn.textContent = text; setTimeout(function () { btn.textContent = label; }, 2000); }
+      var email = btn.getAttribute('data-email'), label = btn.textContent;
+      function done(t) { btn.textContent = t; setTimeout(function () { btn.textContent = label; }, 2000); }
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(function () { done('Copied'); }, function () { done(email); });
+        navigator.clipboard.writeText(email).then(function () { done('Copied ✓'); }, function () { done(email); });
       } else { done(email); }
     });
   });
-</script>
 
+  // Filters
+  var filterBtns = document.querySelectorAll('.filters button');
+  filterBtns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.getAttribute('data-filter');
+      filterBtns.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      document.querySelectorAll('.wall .card').forEach(function (c) { c.hidden = f !== 'all' && c.getAttribute('data-cat') !== f; });
+    });
+  });
+
+  // Player
+  var dlg = document.getElementById('player'), frame = document.getElementById('frame'), openSrc = document.getElementById('open-src');
+  function openPlayer(kind, id, orient) {
+    var src, link;
+    if (kind === 'yt') {
+      src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+      link = orient === 'v' ? 'https://www.youtube.com/shorts/' + id : 'https://www.youtube.com/watch?v=' + id;
+      frame.className = 'frame ' + (orient === 'v' ? 'v' : 'h');
+    } else {
+      src = 'https://www.instagram.com/reel/' + id + '/embed/';
+      link = 'https://www.instagram.com/reel/' + id + '/';
+      frame.className = 'frame ig';
+    }
+    frame.innerHTML = '';
+    var ifr = document.createElement('iframe');
+    ifr.src = src; ifr.title = 'Video player'; ifr.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; ifr.allowFullscreen = true;
+    frame.appendChild(ifr);
+    openSrc.href = link;
+    openSrc.textContent = kind === 'yt' ? 'Open on YouTube ↗' : 'Open on Instagram ↗';
+    if (dlg.showModal) dlg.showModal(); else window.open(link, '_blank', 'noopener');
+  }
+  function closePlayer() { frame.innerHTML = ''; if (dlg.open) dlg.close(); }
+  document.querySelectorAll('.phone[data-id]').forEach(function (p) {
+    p.addEventListener('click', function () { openPlayer(p.getAttribute('data-kind'), p.getAttribute('data-id'), p.getAttribute('data-orient')); });
+  });
+  document.getElementById('close-player').addEventListener('click', closePlayer);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) closePlayer(); });
+  dlg.addEventListener('close', function () { frame.innerHTML = ''; });
+
+  // Reveal + count-up
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target, end = parseFloat(el.dataset.count), dec = +el.dataset.dec, suf = el.dataset.suffix, t0 = null;
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var k = Math.min((ts - t0) / 1200, 1), v = end * (1 - Math.pow(1 - k, 3));
+          el.textContent = v.toFixed(dec) + suf;
+          if (k < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step); co.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    document.querySelectorAll('[data-count]').forEach(function (el) { co.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+})();
+</script>
 </body>
 </html>
