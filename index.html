@@ -228,6 +228,41 @@
   .player-bar { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
   .player-bar a, .player-bar button { font: 700 14px var(--body); color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.3); padding: 8px 16px; border-radius: 999px; text-decoration: none; cursor: pointer; }
 
+  /* ---------- Icons & graphics ---------- */
+  .ic { width: 18px; height: 18px; flex: 0 0 auto; vertical-align: -4px; }
+  .ic.mono { color: currentColor; }
+  .chips li { display: inline-flex; align-items: center; gap: 7px; }
+  .chips li .ic.mono { color: var(--rose); }
+  .socials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .social { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 8px; border-radius: 16px; background: var(--paper);
+    border: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: transform .15s ease, border-color .15s ease; }
+  .social:hover { transform: translateY(-2px); border-color: var(--gold); }
+  .social svg { width: 30px; height: 30px; }
+  .social span { display: grid; line-height: 1.15; font-size: 12px; color: var(--muted); font-weight: 600; }
+  .social b { font-size: 14px; color: var(--ink); }
+  .spark { position: absolute; z-index: 2; color: var(--gold); pointer-events: none; }
+  .spark.sp1 { width: 34px; height: 34px; left: 2%; top: 4%; animation: twinkle 3.2s ease-in-out infinite; }
+  .spark.sp2 { width: 20px; height: 20px; right: 4%; bottom: 30%; color: var(--rose); animation: twinkle 2.6s .6s ease-in-out infinite; }
+  .spark.sp3 { width: 14px; height: 14px; left: 18%; top: -2%; animation: twinkle 3.8s 1.2s ease-in-out infinite; }
+  @keyframes twinkle { 0%, 100% { transform: scale(1) rotate(0); opacity: 1; } 50% { transform: scale(.6) rotate(25deg); opacity: .55; } }
+  .orbit { position: absolute; z-index: 2; width: 52px; height: 52px; border-radius: 16px; background: var(--paper); border: 1px solid var(--line);
+    box-shadow: var(--shadow); display: grid; place-items: center; animation: bob 4s ease-in-out infinite; }
+  .orbit svg { width: 30px; height: 30px; }
+  .orbit.o1 { right: -4%; top: 40%; }
+  .orbit.o2 { left: 6%; top: 30%; animation-delay: .8s; }
+  .orbit.o3 { right: 14%; bottom: -3%; animation-delay: 1.6s; }
+  @keyframes bob { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-8px) rotate(4deg); } }
+  .st-row { display: flex; align-items: center; gap: 6px; }
+  .st-row .ic { width: 22px; height: 22px; }
+  .src { display: inline-flex; gap: 4px; margin-right: 8px; vertical-align: middle; }
+  .src .ic { width: 16px; height: 16px; }
+  .phone .plat { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px 4px 5px; background: rgba(0,0,0,.38); }
+  .phone .plat svg { width: 18px; height: 18px; background: #fff; border-radius: 6px; padding: 1px; }
+  .player-bar a { display: inline-flex; align-items: center; gap: 8px; }
+  .rulebook .eyebrow .ic { width: 14px; height: 14px; vertical-align: -1px; }
+  footer .btn .ic.mono { color: var(--rose); }
+  .btn .ic { width: 20px; height: 20px; }
+
   /* ---------- Reveal ---------- */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
   .reveal.in { opacity: 1; transform: none; }
@@ -249,13 +284,52 @@
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .marquee-track { animation: none; }
+    .marquee-track, .spark, .orbit { animation: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
     .phone, .btn, .phone .play { transition: none; }
   }
 </style>
 </head>
 <body>
+
+<!-- Icon sprite: platform logos + decorative graphics -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="ig-grad" cx="0.3" cy="1.07" r="1.3">
+      <stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/>
+      <stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/>
+    </radialGradient>
+  </defs>
+  <symbol id="i-ig" viewBox="0 0 24 24">
+    <rect x="1.5" y="1.5" width="21" height="21" rx="6.2" fill="url(#ig-grad)"/>
+    <rect x="5.4" y="5.4" width="13.2" height="13.2" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/>
+    <circle cx="12" cy="12" r="3.2" fill="none" stroke="#fff" stroke-width="1.8"/>
+    <circle cx="16.1" cy="7.9" r="1" fill="#fff"/>
+  </symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24">
+    <rect x="1" y="4.6" width="22" height="14.8" rx="4.4" fill="#FF0000"/>
+    <path d="M9.8 8.6v6.8l5.9-3.4z" fill="#fff"/>
+  </symbol>
+  <symbol id="i-shorts" viewBox="0 0 24 24">
+    <g transform="rotate(-28 12 12)">
+      <rect x="7.4" y="0.8" width="11.6" height="13" rx="5.8" fill="#FF0033"/>
+      <rect x="5" y="10.2" width="11.6" height="13" rx="5.8" fill="#FF0033"/>
+      <rect x="6.2" y="6" width="11.6" height="12" rx="3" fill="#FF0033"/>
+    </g>
+    <path d="M10 8.9v6.2l5.3-3.1z" fill="#fff"/>
+  </symbol>
+  <symbol id="i-in" viewBox="0 0 24 24">
+    <rect x="1.5" y="1.5" width="21" height="21" rx="4" fill="#0A66C2"/>
+    <circle cx="7.4" cy="7.3" r="1.7" fill="#fff"/>
+    <rect x="5.9" y="10" width="3" height="8.2" fill="#fff"/>
+    <path d="M11 10h2.9v1.2c.5-.8 1.5-1.4 2.8-1.4 2.2 0 3.3 1.4 3.3 3.9v4.5h-3v-3.9c0-1.1-.4-1.8-1.4-1.8-1 0-1.6.7-1.6 1.8v3.9h-3z" fill="#fff"/>
+  </symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 0c.7 6.4 5.6 11.3 12 12-6.4.7-11.3 5.6-12 12-.7-6.4-5.6-11.3-12-12C6.4 11.3 11.3 6.4 12 0z" fill="currentColor"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 9h10M7 12.5h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-cut" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.2 8.2 20 19M8.2 15.8 20 5"/></g></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z"/><circle cx="12" cy="12" r="3"/></g></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></g></symbol>
+</svg>
 
 <header class="topbar">
   <div class="wrap">
@@ -278,20 +352,31 @@
       <p class="lede sass">Scroll <em>rukega.</em> Sale <em>badhegi.</em></p>
       <p class="sub">I make short videos about skincare, makeup, jewellery and budget fashion, in Hindi, English and Hinglish, the way your customer actually talks. I script, shoot and edit everything myself.</p>
       <ul class="chips">
-        <li><b>2.1M</b> Reel views / 30 days</li>
-        <li>Hindi · English · Hinglish</li>
-        <li>Shot &amp; edited in CapCut</li>
+        <li><svg class="ic"><use href="#i-ig"/></svg><b>2.1M</b> Reel views / 30 days</li>
+        <li><svg class="ic mono"><use href="#i-chat"/></svg>Hindi · English · Hinglish</li>
+        <li><svg class="ic mono"><use href="#i-cut"/></svg>Shot &amp; edited in CapCut</li>
       </ul>
       <div class="actions">
         <a class="btn primary" href="#work">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Watch my work</a>
-        <button class="btn" type="button" data-email="aditi.singh281003@gmail.com">Copy email</button>
+        <button class="btn" type="button" data-email="aditi.singh281003@gmail.com"><svg class="ic mono" aria-hidden="true"><use href="#i-mail"/></svg>Copy email</button>
+      </div>
+      <div class="socials">
+        <a class="social" href="https://www.instagram.com/k25diti/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg><span><b>@k25diti</b>Instagram</span></a>
+        <a class="social" href="https://www.youtube.com/@onlybyaditi" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-yt"/></svg><span><b>@onlybyaditi</b>YouTube</span></a>
+        <a class="social" href="https://www.youtube.com/@onlybyaditi/shorts" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-shorts"/></svg><span><b>Shorts</b>YouTube</span></a>
       </div>
     </div>
     <div class="portrait">
+      <svg class="spark sp1" aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <svg class="spark sp2" aria-hidden="true"><use href="#i-sparkle"/></svg>
+      <svg class="spark sp3" aria-hidden="true"><use href="#i-sparkle"/></svg>
       <div class="arch"><img src="media/aditi.jpg" alt="Aditi Singh, smiling, wearing clear-frame glasses" width="480" height="480"></div>
-      <div class="sticker s1"><b>1.4M</b>people watched<br>last month</div>
+      <div class="sticker s1"><span class="st-row"><svg class="ic"><use href="#i-ig"/></svg><b>1.4M</b></span>people watched<br>last month</div>
       <div class="sticker s2"><b>Talks to camera,</b>not at it.</div>
+      <div class="orbit o1" title="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></div>
+      <div class="orbit o2" title="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></div>
+      <div class="orbit o3" title="YouTube Shorts"><svg aria-hidden="true"><use href="#i-shorts"/></svg></div>
     </div>
   </div>
 </div>
@@ -312,7 +397,7 @@
       <div class="stat"><b data-count="60" data-suffix="" data-dec="0">60</b><span>Reels in 30 days</span><em>consistency is a skill</em></div>
       <div class="stat"><b data-count="7.4" data-suffix="K" data-dec="1">7.4K</b><span>Shares</span><em>sent to the group chat</em></div>
     </div>
-    <p class="fine">Instagram Insights, 11 Sep – 11 Oct 2026. Engagement = (likes + comments + shares + saves) ÷ unique viewers = 85.5K ÷ 1.4M. Followers: 741 on Instagram, 316 on YouTube. Most of my reach comes from Instagram recommending my Reels to new people, which is exactly what a brand's ad needs to do. Every product in these videos was bought by me: independent reviews, never sponsored posts.</p>
+    <p class="fine"><span class="src"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg><svg class="ic" aria-hidden="true"><use href="#i-yt"/></svg></span>Instagram Insights, 11 Sep – 11 Oct 2026. Engagement = (likes + comments + shares + saves) ÷ unique viewers = 85.5K ÷ 1.4M. Followers: 741 on Instagram, 316 on YouTube. Most of my reach comes from Instagram recommending my Reels to new people, which is exactly what a brand's ad needs to do. Every product in these videos was bought by me: independent reviews, never sponsored posts.</p>
 
     <!-- Featured -->
     <section id="best" class="reveal">
@@ -458,7 +543,7 @@
   <!-- Rulebook -->
   <div class="wrap">
     <section id="rulebook" class="rulebook reveal">
-      <p class="eyebrow">My content rulebook</p>
+      <p class="eyebrow"><svg class="ic mono" aria-hidden="true"><use href="#i-sparkle"/></svg> My content rulebook</p>
       <h2>Growth tips, with <em>a little attitude.</em></h2>
       <div class="quotes">
         <figure class="quote big"><p>Your product doesn't need more ads. It needs a better first two seconds.</p><small>Rule 01 · The hook</small></figure>
@@ -567,12 +652,12 @@
     <h2>Let's make your product <em>impossible to scroll past.</em></h2>
     <div class="row">
       <span class="addr">aditi.singh281003@gmail.com</span>
-      <button class="btn primary" type="button" data-email="aditi.singh281003@gmail.com">Copy email</button>
+      <button class="btn primary" type="button" data-email="aditi.singh281003@gmail.com"><svg class="ic mono" aria-hidden="true"><use href="#i-mail"/></svg>Copy email</button>
     </div>
     <div class="row">
-      <a class="btn" href="https://www.instagram.com/k25diti/" target="_blank" rel="noopener">Instagram @k25diti</a>
-      <a class="btn" href="https://www.youtube.com/@onlybyaditi" target="_blank" rel="noopener">YouTube @onlybyaditi</a>
-      <a class="btn" href="https://www.linkedin.com/in/aditi-singh-69140134b" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://www.instagram.com/k25diti/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ig"/></svg>Instagram @k25diti</a>
+      <a class="btn" href="https://www.youtube.com/@onlybyaditi" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-yt"/></svg>YouTube @onlybyaditi</a>
+      <a class="btn" href="https://www.linkedin.com/in/aditi-singh-69140134b" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
     </div>
     <p class="small">Stats from Instagram Insights and YouTube, October 2026. All reviewed products were bought by me.</p>
   </div>
@@ -599,6 +684,14 @@
         navigator.clipboard.writeText(email).then(function () { done('Copied ✓'); }, function () { done(email); });
       } else { done(email); }
     });
+  });
+
+  // Platform logo on every video card
+  document.querySelectorAll('.phone[data-kind]').forEach(function (p) {
+    var plat = p.querySelector('.plat'); if (!plat) return;
+    var id = p.dataset.kind === 'ig' ? 'i-ig' : (p.dataset.orient === 'v' ? 'i-shorts' : 'i-yt');
+    plat.textContent = plat.textContent.replace(/^(YT Short|YouTube|Instagram Reel|Reel)\s*·?\s*/, '') || (id === 'i-yt' ? 'Video' : 'Reel');
+    plat.insertAdjacentHTML('afterbegin', '<svg aria-hidden="true"><use href="#' + id + '"/></svg>');
   });
 
   // Filters
@@ -629,7 +722,7 @@
     ifr.src = src; ifr.title = 'Video player'; ifr.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; ifr.allowFullscreen = true;
     frame.appendChild(ifr);
     openSrc.href = link;
-    openSrc.textContent = kind === 'yt' ? 'Open on YouTube ↗' : 'Open on Instagram ↗';
+    openSrc.innerHTML = '<svg class="ic" aria-hidden="true"><use href="#' + (kind === 'yt' ? (orient === 'v' ? 'i-shorts' : 'i-yt') : 'i-ig') + '"/></svg>' + (kind === 'yt' ? 'Open on YouTube ↗' : 'Open on Instagram ↗');
     if (dlg.showModal) dlg.showModal(); else window.open(link, '_blank', 'noopener');
   }
   function closePlayer() { frame.innerHTML = ''; if (dlg.open) dlg.close(); }
