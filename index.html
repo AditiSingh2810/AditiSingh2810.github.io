@@ -679,7 +679,10 @@
   document.querySelectorAll('.phone[data-kind]').forEach(function (p) {
     var plat = p.querySelector('.plat'); if (!plat) return;
     var id = p.dataset.kind === 'ig' ? 'i-ig' : (p.dataset.orient === 'v' ? 'i-shorts' : 'i-yt');
-    plat.textContent = plat.textContent.replace(/^(YT Short|YouTube|Instagram Reel|Reel)\s*·?\s*/, '') || (id === 'i-yt' ? 'Video' : 'Reel');
+    var label = plat.textContent.replace(/^(YT Short|YouTube|Instagram Reel|Reel)\s*·?\s*/, '') || (id === 'i-yt' ? 'Video' : 'Reel');
+    var secs = label.match(/^(\d+)s$/i); // "28s" -> "0:28" (video length)
+    if (secs) { var n = +secs[1]; label = Math.floor(n / 60) + ':' + String(n % 60).padStart(2, '0'); plat.title = 'Video length'; }
+    plat.textContent = label;
     plat.insertAdjacentHTML('afterbegin', '<svg aria-hidden="true"><use href="#' + id + '"/></svg>');
   });
 
